@@ -6,7 +6,7 @@ import csv
 def calculate_gc_trends(input_fasta="ecoli_cds.fasta", output_csv = "gc_window_trend.csv", window_size=50,step_size=10):
     records = SeqIO.parse(input_fasta, "fasta")
 
-#Creat a CSV file for writing into and add some headers
+#Create a CSV file for writing into and add some headers
     with open(output_csv, "w", newline="") as csvfile:
         csv_writer = csv.writer(csvfile)
         csv_writer.writerow(["Gene_ID", "Position", "GC_content", "GC3_content"])
