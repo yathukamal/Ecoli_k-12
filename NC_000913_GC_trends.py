@@ -24,7 +24,7 @@ bad_seq = []
 #Function to check start and stop codons
 def check_start_stop(seq, gene_id):
     #check for start codon(ATG)
-    start_list = ["ATG"]
+    start_list = ["ATG","GTG","TTG"]
     first_codon = seq[:3]
     if first_codon not in start_list:
         print(f"Bad first codon: {first_codon} for gene {gene_id}")
